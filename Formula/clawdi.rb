@@ -5,7 +5,7 @@ class Clawdi < Formula
   license "MIT"
 
   livecheck do
-    url "https://github.com/Clawdi-AI/clawdi"
+    url :stable
     regex(/^clawdi-cli-v?(\d+(?:\.\d+)+)$/i)
     strategy :github_releases do |json, regex|
       json.filter_map do |release|
