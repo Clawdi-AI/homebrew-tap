@@ -47,5 +47,6 @@ class Clawdi < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/clawdi --version")
+    assert_match '"managedBy": "homebrew"', shell_output("#{bin}/clawdi update --json")
   end
 end
