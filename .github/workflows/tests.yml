@@ -60,5 +60,6 @@ jobs:
           TAP_NAME: ${{ steps.set-up-homebrew.outputs.tap-name }}
         run: |
           brew audit --strict --cask "$TAP_NAME/clawdi@beta"
+          brew bump --no-pull-requests --casks --tap="$TAP_NAME"
           brew install --cask "$TAP_NAME/clawdi@beta"
           test -d "/Applications/Clawdi.app"
